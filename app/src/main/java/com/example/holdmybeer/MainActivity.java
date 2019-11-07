@@ -18,9 +18,9 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         brands = findViewById(R.id.brands);
         color = findViewById(R.id.color);
-        find_beer = findViewById(R.id.find_beer);
     }
     public void onClickFindBeer(View view){
-
+        String beerType = String.valueOf(color.getSelectedItem());
+        brands.setText(beerType);
     }
 }
