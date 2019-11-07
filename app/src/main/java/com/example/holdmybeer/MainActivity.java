@@ -36,15 +36,4 @@ public class MainActivity extends Activity {
             }
         });
     }
-
-
-
-//    public void onClickFindBeer(View view){
-//        String beerType = String.valueOf(color.getSelectedItem());
-//        List<String> beersBrands = expert.getBrands(beerType);
-//        StringBuilder brandsFormatted = new StringBuilder();
-//        for (String brand: beersBrands){
-//            brandsFormatted.append(brand).append('\n');
-//        }
-//    }
 }
