@@ -4,14 +4,15 @@ import android.app.Activity;
 
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
+
+import java.util.List;
 
 public class MainActivity extends Activity {
     private TextView brands;
     private Spinner color;
-    private Button find_beer;
+    private BeerExpert expert = new BeerExpert();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,6 +22,10 @@ public class MainActivity extends Activity {
     }
     public void onClickFindBeer(View view){
         String beerType = String.valueOf(color.getSelectedItem());
-        brands.setText(beerType);
+        List<String> beersBrands = expert.getBrands(beerType);
+        StringBuilder brandsFormatted = new StringBuilder();
+        for (String brand: beersBrands){
+            brandsFormatted.append(brand).append('\n');
+        }
     }
 }
