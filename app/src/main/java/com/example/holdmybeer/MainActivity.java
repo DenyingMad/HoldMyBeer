@@ -19,6 +19,7 @@ public class MainActivity extends Activity {
         brands = findViewById(R.id.brands);
         color = findViewById(R.id.color);
         find_beer = findViewById(R.id.find_beer);
+        
     }
     public void onClickFindBeer(View view){
 
